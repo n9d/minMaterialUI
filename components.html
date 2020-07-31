@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid+Cardでレスポンシブ</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <!-- Babel does not exist on the original site. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
+
+  <script type="text/babel">
+    const {
+      Button,
+      Card,CardContent,CardActions,
+      Grid
+    } = MaterialUI; // unstructtured MaterialUI
+    // Define Componet
+    const HelloWorld = (props) => {
+      return (
+        <div>
+          <h2>Grid+Cardでレスポンシブ</h2>
+          <Button variant="contained">ボタン</Button>
+          <Grid container spacing={1}>
+            <Grid item><MyCard n={-1}/></Grid>
+            <Grid item xs={12}><MyCard n={0}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={1}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={2}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={3}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={4}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={5}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={6}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={7}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={8}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={9}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={10}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={11}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={12}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={13}/></Grid>
+            <Grid item xs={12} sm={3} md={2}><MyCard n={14}/></Grid>
+          </Grid>
+        </div>
+      )
+    }
+    const MyCard = (props) => {
+      return (
+        <Card>
+          <CardContent>{props.n}枚目のカード</CardContent>
+          <CardContent>あいう</CardContent>
+          <CardActions><Button>カードの中のボタン</Button></CardActions>
+        </Card>
+      )
+    }
+    // Execute Render
+    ReactDOM.render(
+      <HelloWorld />,
+      document.getElementById("app")
+    );
+  </script>
+  あああああ
+</body>
+
+</html>

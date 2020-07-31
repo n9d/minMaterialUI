@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>React+MaterialUI(cdn版)</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <!-- Babel does not exist on the original site. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
+
+  <script type="text/babel">
+    const {Button} = MaterialUI; // unstructtured MaterialUI
+    // Define Componet
+    const HelloWorld = (props) => {
+      return (
+        <div>
+          <h2>Hello, World!!</h2>
+          <p>hello, worldできました</p>
+          <Button variant="contained">ボタン</Button>
+        </div>
+      )
+    }
+    // Execute Render
+    ReactDOM.render(
+      <HelloWorld />,
+      document.getElementById("app")
+    );
+  </script>
+</body>
+
+</html>
