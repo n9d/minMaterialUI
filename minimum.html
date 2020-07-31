@@ -18,10 +18,10 @@
 
   <script type="text/babel">
     const { Button, Typography, CircularProgress } = MaterialUI; // unstructtured MaterialUI
+    const { useState, useEffect } = React;
     // Define Componet
     const HelloWorld = (props) => {
 
-      const { useState, useEffect } = React;
       const [value, setValue] = useState("");
       useEffect(() => {
         fetch("https://heroku-echo-express.herokuapp.com/echo?value=echo%20test")
