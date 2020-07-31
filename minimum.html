@@ -17,13 +17,23 @@
   <script crossorigin src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
 
   <script type="text/babel">
-    const {Button} = MaterialUI; // unstructtured MaterialUI
+    const { Button, Typography, CircularProgress } = MaterialUI; // unstructtured MaterialUI
     // Define Componet
     const HelloWorld = (props) => {
+
+      const { useState, useEffect } = React;
+      const [value, setValue] = useState("");
+      useEffect(() => {
+        fetch("https://heroku-echo-express.herokuapp.com/echo?value=echo%20test")
+          .then(res => res.json())
+          .then(json => setValue(json))
+      }, [setValue])
+
       return (
         <div>
           <h2>Hello, World!!</h2>
           <p>hello, worldできました</p>
+          <Typography>{value || <CircularProgress />}</Typography>
           <Button variant="contained">ボタン</Button>
         </div>
       )
