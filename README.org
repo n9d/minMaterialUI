@@ -29,11 +29,11 @@ Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= �
 ** Buttom
 
 - [[file:button.html]] :: 横いっぱいのボタンを表示し、リサイズによりレスポンシブが確認できる
-
+- [[file:inclementButton.html]] :: useStateつかってインクリメントするボタン
 
 ** Table
 
-- [[file:table.html]] :: 現在 Reactがワーンングを吐く
+- [[file:table.html]] :: ちゃんとリサイズするテーブル（HTML5デフォルトのテーブルもそうかな？）
 
 * 非同期
 
