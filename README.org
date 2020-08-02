@@ -8,7 +8,7 @@ CDNで持ってきているので編集するだけでmaterial-uiを実験でき
 
 * 最小構成
 
-- [[file:minimum.html]] :: 最小構成のmaterial ui
+- [[https://n9d.github.io/minMaterialUI/minimum.html][minimum.html]] :: 最小構成のmaterial ui
 
 
 * コンポーネント
@@ -17,24 +17,24 @@ CDNで持ってきているので編集するだけでmaterial-uiを実験でき
 
 Gridを用いて好きに配置する。Gridは12分割したもので、ノリ的にはbootstrap。
 
-- [[file:card.html]] :: Card + Grid でレスポンシブ
+- [[https://n9d.github.io/minMaterialUI/card.html][card.html]] :: Card + Grid でレスポンシブ
 
 ** Typography
 
 Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= を使用すること。
 
-- [[file:typography.html]] :: テーマを設定して文字の意味と装飾を一致
+- [[https://n9d.github.io/minMaterialUI/typography.html][typography.html]] :: テーマを設定して文字の意味と装飾を一致
 
 
 ** Buttom
 
-- [[file:button.html]] :: 横いっぱいのボタンを表示し、リサイズによりレスポンシブが確認できる
-- [[file:inclementButton.html]] :: useStateつかってインクリメントするボタン
+- [[https://n9d.github.io/minMaterialUI/button.html][button.html]] :: 横いっぱいのボタンを表示し、リサイズによりレスポンシブが確認できる
+- [[https://n9d.github.io/minMaterialUI/inclementButton.html][inclementButton.html]] :: useStateつかってインクリメントするボタン
 
 ** Table
 
-- [[file:table.html]] :: ちゃんとリサイズするテーブル（HTML5デフォルトのテーブルもそうかな？）
+- [[https://n9d.github.io/minMaterialUI/table.html][table.html]] :: ちゃんとリサイズするテーブル（HTML5デフォルトのテーブルもそうかな？）
 
 * 非同期
 
-- [[file:fetch.html]] :: 非同期であるfetchを加えた構成
+- [[https://n9d.github.io/minMaterialUI/fetch.html][fetch.html]] :: 非同期であるfetchを加えた構成

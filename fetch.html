@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>React+MaterialUI(cdn版)</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <title>React+MaterialUI(cdn版)</title>
 </head>
 
 <body>
@@ -19,8 +20,9 @@
   <script type="text/babel">
     const { Button, Typography, CircularProgress, Icon } = MaterialUI; // unstructtured MaterialUI
     const { useState, useEffect } = React;
+
     // Define Componet
-    const HelloWorld = (props) => {
+    const App = (props) => {
 
       const [value, setValue] = useState("");
       const [count, setCount] = useState(0);
@@ -72,7 +74,7 @@
     }
     // Execute Render
     ReactDOM.render(
-      <HelloWorld />,
+      <App />,
       document.getElementById("app")
     );
   </script>

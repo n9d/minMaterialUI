@@ -23,6 +23,7 @@
       Typography,
       Container, Box,
     } = MaterialUI; // unstructtured MaterialUI
+
     // Define Theme
     const theme=createMuiTheme({
       overrides: {
@@ -45,7 +46,7 @@
     });
 
     // Define Componet
-    const HelloWorld = () => {
+    const App = () => {
       return (
         <Box>
 
@@ -64,7 +65,7 @@
     // Execute Render
     ReactDOM.render(
       <ThemeProvider theme={theme}>
-        <HelloWorld/>
+        <App/>
       </ThemeProvider>
       ,
       document.getElementById("app")

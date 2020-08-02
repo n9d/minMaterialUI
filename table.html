@@ -27,6 +27,7 @@
       Button,
       Card, CardContent, CardActions,
     } = MaterialUI; // unstructtured MaterialUI
+
     // Define Theme
     const theme=createMuiTheme({
       overrides: {
@@ -49,7 +50,7 @@
     });
 
     // Define Componet
-    const HelloWorld = (props) => {
+    const App = () => {
       return (
           <TableContainer component={Paper}>
             <Table>
@@ -86,7 +87,7 @@
     // Execute Render
     ReactDOM.render(
       <ThemeProvider theme={theme}>
-        <HelloWorld/>
+        <App/>
       </ThemeProvider>
       ,
       document.getElementById("app")
