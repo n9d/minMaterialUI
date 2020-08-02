@@ -17,14 +17,56 @@
   <script crossorigin src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
 
   <script type="text/babel">
-    const {Button} = MaterialUI; // unstructtured MaterialUI
+    const { Button, Typography, CircularProgress, Icon } = MaterialUI; // unstructtured MaterialUI
+    const { useState, useEffect } = React;
     // Define Componet
     const HelloWorld = (props) => {
+
+      const [value, setValue] = useState("");
+      const [count, setCount] = useState(0);
+      const [loading, setLoading] = useState(false);
+      useEffect(() => {
+        fetch("https://heroku-echo-express.herokuapp.com/echo?value=echo%20test")
+          .then(res => res.json())
+          .then(json => setValue(json))
+      }, [setValue])
+
+
+      const handleAddClick = () => {
+        setLoading(true)
+        fetch(`https://heroku-echo-express.herokuapp.com/plus-one?value=${count}&delay=1000`)
+          .then(res => res.json())
+          .then(json => {
+            const ret = Number(json)
+            setCount(typeof ret === "number" ? ret : 0)
+          })
+          .finally(() => {
+            setLoading(false)
+          })
+      }
       return (
         <div>
           <h2>Hello, World!!</h2>
           <p>hello, worldできました</p>
-          <Button variant="contained">ボタン</Button>
+          <Typography>{value || <CircularProgress />}</Typography>
+          <Button variant="contained">ボタン</Button><br />
+          click count:{count}<br />
+          <Button
+            variant="outlined"
+            onClick={handleAddClick}
+            disabled={loading}
+            endIcon={loading ? <CircularProgress /> : undefined}
+          >
+            +1
+          </Button>
+          <Button
+            variant="outlined"
+            onClick={() => setCount(0)}
+            disabled={loading}
+            endIcon={loading ? <CircularProgress /> : undefined}
+          >
+            reset
+          </Button>
         </div>
       )
     }
