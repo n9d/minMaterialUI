@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <title>テーマを設定して文字の意味と装飾を一致</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
+
+  <script type="text/babel">
+    const {
+      ThemeProvider, createMuiTheme,
+      Typography,
+      Container, Box,
+    } = MaterialUI; // unstructtured MaterialUI
+    // Define Theme
+    const theme=createMuiTheme({
+      overrides: {
+        MuiButton: {
+          root: {
+            borderRadius:100
+          },
+        },
+      },
+      typography: {
+          h1: {
+            fontSize: 60,
+            gutterBottom: true,
+          },
+          h2: {
+            fontSize: 34,
+            gutterBottom: true,
+          },
+      },
+    });
+
+    // Define Componet
+    const HelloWorld = () => {
+      return (
+        <Box>
+
+          <Container xs={12} sm={8} md={8}>
+            <Typography paragraph />
+            <Typography variant="h1">これがH1</Typography>
+            <Typography variant="h2">H2はこの大きさ</Typography>
+            <Typography variant="body1">bodyはこの大きさ</Typography>
+            <Typography paragraph />
+            <Typography variant="body1">typographyをテーマで設定することで本文中に余計なスタイルを入れない</Typography>
+          </Container>
+        </Box>
+      )
+    }
+
+    // Execute Render
+    ReactDOM.render(
+      <ThemeProvider theme={theme}>
+        <HelloWorld/>
+      </ThemeProvider>
+      ,
+      document.getElementById("app")
+    );
+  </script>
+</body>
+
+</html>
