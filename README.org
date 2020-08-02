@@ -5,3 +5,11 @@
 + material-ui
 
 CDNで持ってきているので編集するだけでmaterial-uiを実験できる
+
+** 最小構成
+
+- [[file:minimum.html]] :: 最小構成のmaterial ui
+
+** 非同期
+
+- [[file:fetch.html]] :: 非同期であるfetchを加えた構成
