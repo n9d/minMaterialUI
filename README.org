@@ -37,7 +37,7 @@ Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= �
 
 ** Box/Paper/Container
 
-まあ、囲い。ただし、Paperには枠線が付き、Containerはmaxwitdhで横幅指定が出来る
+まあ、囲い。ただし、Paperには枠線みたいな影（枠線ではない）が付き、Containerはmaxwitdhで横幅指定が出来る
 
 -- [[https://n9d.github.io/minMaterialUI/paperBoxContainer.html][paperBoxContainer.html]] :: それぞれを単に出力
 
