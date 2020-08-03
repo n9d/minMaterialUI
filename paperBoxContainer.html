@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <title>Paper Box Containerの違い</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
+
+  <script type="text/babel">
+    const {
+      ThemeProvider, createMuiTheme,
+      Typography,
+      Container, Box, Paper,
+    } = MaterialUI;
+
+    // Define Theme
+    const theme=createMuiTheme({});
+
+    // Define Componet
+    const App = () => {
+      return (
+        <Box>
+
+          <Box>
+            <Typography variant="h1" color="textPrimary">これがH1</Typography>
+            <Typography variant="h2" color="textSecondary">これがH2でセカンダリ色</Typography>
+            <Typography variant="h3" color="error">H3はこの大きさでエラー色</Typography>
+            <Typography variant="body1" >これはBox</Typography>
+          </Box>
+
+          <Container>
+            <Typography variant="h1" color="textPrimary">これがH1</Typography>
+            <Typography variant="h2" color="textSecondary">これがH2でセカンダリ色</Typography>
+            <Typography variant="h3" color="error">H3はこの大きさでエラー色</Typography>
+            <Typography variant="body1" >これはContainerで周りにマージンを持っている</Typography>
+            <Typography variant="body1" >Containerだけがmaxwidthを指定できる</Typography>
+          </Container>
+
+          <Paper>
+            <Typography variant="h1" color="textPrimary">これがH1</Typography>
+            <Typography variant="h2" color="textSecondary">これがH2でセカンダリ色</Typography>
+            <Typography variant="h3" color="error">H3はこの大きさでエラー色</Typography>
+            <Typography variant="body1" >これはPaperで周りに枠線が出る</Typography>
+          </Paper>
+
+        </Box>
+      )
+    }
+
+    // Execute Render
+    ReactDOM.render(
+      <ThemeProvider theme={theme}>
+        <App/>
+      </ThemeProvider>
+      ,
+      document.getElementById("app")
+    );
+  </script>
+</body>
+
+</html>

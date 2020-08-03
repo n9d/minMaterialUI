@@ -35,6 +35,12 @@ Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= �
 
 - [[https://n9d.github.io/minMaterialUI/table.html][table.html]] :: ちゃんとリサイズするテーブル（HTML5デフォルトのテーブルもそうかな？）
 
+** Box/Paper/Container
+
+まあ、囲い。ただし、Paperには枠線が付き、Containerはmaxwitdhで横幅指定が出来る
+
+-- [[https://n9d.github.io/minMaterialUI/boxPaperContainer.html][boxPaperContainer.html]] :: それぞれを単に出力
+
 * 非同期
 
 - [[https://n9d.github.io/minMaterialUI/fetch.html][fetch.html]] :: 非同期であるfetchを加えた構成
