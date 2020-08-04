@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <title>グリッド市松模様</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
+
+  <script type="text/babel">
+    const {
+      ThemeProvider, createMuiTheme,
+      Grid, Box, Container, Paper,
+      Button, Typography,
+      Card,CardActions,CardContent,
+      Icon,SvgIcon
+    } = MaterialUI; // unstructtured MaterialUI
+    // Define Theme
+    const theme=createMuiTheme({
+      overrides: {
+        MuiButton: {
+          root: {
+            borderRadius:100 //角を丸くする
+          },
+        },
+      },
+    });
+
+    const bgPrimaryProps = {
+      bgcolor: 'primary',
+    };
+    const bgBlueProps = {
+      backgroundColor: '#90caf9',
+      height: '5vh',
+    }
+    const bgRedProps = {
+      backgroundColor: '#ef9a9a',
+      height: '5vh',
+    }
+
+    // Define Componet
+    const App = (props) => {
+      return (
+        <Box>
+          <Typography variant="h4">グリッド市松模様</Typography>
+
+          <Grid container alignItems="center" justify="center">
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+          </Grid>
+          <Grid container alignItems="center" justify="center">
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgRedProps}} />
+            </Grid>  
+            <Grid item xs={1}>
+                <Typography component="div" style={{...bgBlueProps}} />
+            </Grid>  
+          </Grid>
+
+          <Typography variant="body1">マージン8pxを残して12分割されていることが確認できる</Typography>
+          </Box>
+      )
+    }
+
+    // Execute Render
+    ReactDOM.render(
+      <ThemeProvider theme={theme}>
+        <App/>
+      </ThemeProvider>
+      ,
+      document.getElementById("app")
+    );
+  </script>
+</body>
+
+</html>

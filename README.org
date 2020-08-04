@@ -19,6 +19,9 @@ Gridを用いて好きに配置する。Gridは12分割したもので、ノリ�
 
 - [[https://n9d.github.io/minMaterialUI/card.html][card.html]] :: Card + Grid でレスポンシブ
 
+
+** Grid
+
 ** Typography
 
 Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= を使用すること。
@@ -40,6 +43,10 @@ Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= �
 まあ、囲い。ただし、Paperには枠線みたいな影（枠線ではない）が付き、Containerはmaxwitdhで横幅指定が出来る
 
 -- [[https://n9d.github.io/minMaterialUI/paperBoxContainer.html][paperBoxContainer.html]] :: それぞれを単に出力
+
+** Icon
+
+-- [[https://n9d.github.io/minMaterialUI/icon.html][icon.html]] :: 今の所 font iconしか出せてない
 
 * 非同期
 

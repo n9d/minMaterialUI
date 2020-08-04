@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <title>グリッド</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
+
+  <script type="text/babel">
+    const {
+      ThemeProvider, createMuiTheme,
+      makeStyles,
+      Grid, Box, Container, Paper,
+      Button, Typography,
+      Card,CardActions,CardContent,
+      Icon,SvgIcon
+    } = MaterialUI; // unstructtured MaterialUI
+    // Define Theme
+    const theme=createMuiTheme({
+      overrides: {
+        MuiButton: {
+          root: {
+            borderRadius:100 //角を丸くする
+          },
+        },
+      },
+    });
+
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            flexGrow: 1,
+        },
+        paper: {
+            padding: theme.spacing(1),
+            textAlign: 'center',
+            color: theme.palette.text.secondary,
+        },
+    }));
+
+    // Define Componet
+    const App = (props) => {
+      return (
+        <Box>
+          <Typography variant="h4">グリッドのspacing</Typography>
+
+          <Typography variant="body1">alignItems="stretch" justify="flex-start" 初期値</Typography>
+          <Grid container alignItems="stretch" justify="flex-start">
+            <Grid item sm={3}>
+            　<Paper>
+                <Typography>cell 1</Typography>
+            　</Paper>
+            </Grid>  
+            <Grid item sm={3}>
+            　<Paper>
+                <Typography>cell 2</Typography>
+            　</Paper>
+            </Grid>  
+            <Grid item sm={3}>
+            　<Paper>
+                <Typography>cell 3</Typography>
+            　</Paper>
+            </Grid>  
+          </Grid>
+
+          <Grid container alignItems="center" justify="center">
+            <Grid item sm={3}>
+              <Paper>
+                <Typography>alignItems="center"</Typography>
+              </Paper>
+            </Grid>  
+            <Grid item sm={3}>
+              <Paper>
+                <Typography>justify="center"</Typography>
+              </Paper>
+            </Grid>  
+            <Grid item sm={3}>
+              <Paper>
+                <Typography>中央揃え</Typography>
+              </Paper>
+            </Grid>  
+          </Grid>
+
+
+
+          <Typography variant="body1">ああ</Typography>
+        </Box>
+      )
+    }
+
+    // Execute Render
+    ReactDOM.render(
+      <ThemeProvider theme={theme}>
+        <App/>
+      </ThemeProvider>
+      ,
+      document.getElementById("app")
+    );
+  </script>
+</body>
+
+</html>

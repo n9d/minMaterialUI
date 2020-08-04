@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <title>アイコン</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
+
+  <!-- for font icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script type="text/babel">
+    const {
+      ThemeProvider, createMuiTheme,
+      Box,
+      Typography,
+      Icon,SvgIcon
+    } = MaterialUI;
+
+    // Define Theme
+    const theme=createMuiTheme({});
+
+    const HomeIcon = (props) => {
+      return (
+        <SvgIcon {...props}>
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </SvgIcon>
+      );
+    }
+
+    // Define Componet
+    const App = (props) => {
+      return (
+        <Box>
+
+
+          <Typography variant="h5" >自分で定義したSVGアイコン</Typography>
+          <HomeIcon />
+
+          <Typography paragraph />
+
+          <Typography variant="h5" >フォントアイコン</Typography>
+          <Icon>fingerprint</Icon>
+          <Icon>delete</Icon>
+          <Icon>star</Icon>
+
+        </Box>
+      )
+    }
+
+    // Execute Render
+    ReactDOM.render(
+      <ThemeProvider theme={theme}>
+        <App/>
+      </ThemeProvider>
+      ,
+      document.getElementById("app")
+    );
+  </script>
+</body>
+
+</html>
