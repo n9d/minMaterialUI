@@ -24,7 +24,7 @@ Gridを用いて好きに配置する。Gridは12分割したもので、ノリ�
 
 配置のためのコンポーネント 12分割
 
-- [[https://n9d.github.io/minMaterialUI/gridCheckerd.html][gridCheckerd.html]] :: Gridを市松模様に塗ってみた。リサイズするとgridが均等に変化していることがわかる
+- [[https://n9d.github.io/minMaterialUI/gridCheckered.html][gridCheckered.html]] :: Gridを市松模様に塗ってみた。リサイズするとgridが均等に変化していることがわかる
 - [[https://n9d.github.io/minMaterialUI/gridCheckeredResponsive.html][gridCheckeredResponsive.html]] :: 上のレスポンシブな感じ
 
 ** Typography
