@@ -21,21 +21,11 @@
   <script type="text/babel">
     const {
       ThemeProvider, createMuiTheme,
-      Grid, Box, Container, Paper,
-      Button, Typography,
-      Card,CardActions,CardContent,
-      Icon,SvgIcon
+      Grid, Box,
+      Typography,
     } = MaterialUI; // unstructtured MaterialUI
     // Define Theme
-    const theme=createMuiTheme({
-      overrides: {
-        MuiButton: {
-          root: {
-            borderRadius:100 //角を丸くする
-          },
-        },
-      },
-    });
+    const theme=createMuiTheme({});
 
     const bgPrimaryProps = {
       bgcolor: 'primary',

@@ -22,6 +22,11 @@ Gridを用いて好きに配置する。Gridは12分割したもので、ノリ�
 
 ** Grid
 
+配置のためのコンポーネント 12分割
+
+- [[https://n9d.github.io/minMaterialUI/gridCheckerd.html][gridCheckerd.html]] :: Gridを市松模様に塗ってみた。リサイズするとgridが均等に変化していることがわかる
+- [[https://n9d.github.io/minMaterialUI/gridCheckeredResponsive.html][gridCheckeredResponsive.html]] :: 上のレスポンシブな感じ
+
 ** Typography
 
 Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= を使用すること。
@@ -51,3 +56,4 @@ Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= �
 * 非同期
 
 - [[https://n9d.github.io/minMaterialUI/fetch.html][fetch.html]] :: 非同期であるfetchを加えた構成
+
