@@ -34,7 +34,7 @@ Material-UIでは原則ベタで文字を置かない。必ず =<Typography>= �
 - [[https://n9d.github.io/minMaterialUI/typography.html][typography.html]] :: テーマを設定して文字の意味と装飾を一致
 
 
-** Buttom
+** Button
 
 - [[https://n9d.github.io/minMaterialUI/button.html][button.html]] :: 横いっぱいのボタンを表示し、リサイズによりレスポンシブが確認できる
 - [[https://n9d.github.io/minMaterialUI/inclementButton.html][inclementButton.html]] :: useStateつかってインクリメントするボタン
